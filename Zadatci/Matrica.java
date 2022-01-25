@@ -1,15 +1,20 @@
 package vjezbanje;
 
 import java.util.Arrays;
-
-import javax.swing.JOptionPane;
+import java.util.Scanner;
 
 public class Matrica {
 
 	public static void main(String[] args) {
 
-		int r = Integer.parseInt(JOptionPane.showInputDialog("Broj redaka"));
-		int s = Integer.parseInt(JOptionPane.showInputDialog("Broj stupaca"));
+		Scanner unos = new Scanner(System.in);
+
+		System.out.println("Broj redaka: ");
+		int r = unos.nextInt();
+
+		System.out.println("Broj stupaca: ");
+		int s = unos.nextInt();
+
 		int[][] matrica = new int[r][s];
 		int sum = r * s;
 		int b = 1;
@@ -54,6 +59,15 @@ public class Matrica {
 			s1--;
 
 		}
+		System.out.println("Matrica");
+
+		/*		for (int i = 0; i < matrica.length; i++) {
+		for (int j = 0; j < matrica[0].length; j++) {
+			System.out.print(matrica[i][j] + "\t");
+		}
+		System.out.println();
+
+		} */
 
 		for (int i = 0; i < matrica.length; i++) {
 			System.out.println(Arrays.toString(matrica[i]));
